@@ -3,18 +3,16 @@
     //00 -> 59
         //after 59, go back to 00, but add increment to min
 
-let zero = "0";
-
 const secondsEl = document.querySelector('.seconds');
 
-let secondsGoingBy = zero + zero;
+let secondsGoingBy = "0" + "0";
 
 function startSeconds() {
     secondsGoingBy++;
     
     if (secondsGoingBy <=9) {
         //this ensures 0 is in front of numbers 0-9
-        secondsEl.textContent = zero + secondsGoingBy;
+        secondsEl.textContent = "0" + secondsGoingBy;
     } else {
         //this is for numbers 11-59
         secondsEl.textContent = secondsGoingBy;
@@ -27,9 +25,9 @@ function startSeconds() {
         //print to display
         startMinutes();
         //reset to 00
-        minutesGoingBy = zero + zero;
+        minutesGoingBy = "0" + "0";
         //print to display
-        minutesEl.textContent = zero + zero;
+        minutesEl.textContent = "0" + "0";
     }
 }
 
@@ -46,13 +44,13 @@ secondsSpeed();
 
 const minutesEl = document.querySelector('.minutes');
 
-let minutesGoingBy = zero + zero;
+let minutesGoingBy = "0" + "0";
 
 function startMinutes() {
     minutesGoingBy++;
 
     if (minutesGoingBy <= 9) {
-        minutesEl.textContent = zero + minutesGoingBy;
+        minutesEl.textContent = "0" + minutesGoingBy;
     } else {
         minutesEl.textContent = minutesGoingBy;
     }
@@ -61,8 +59,8 @@ function startMinutes() {
 
     if (minutesGoingBy === 60) {
         startHours();
-        minutesEl.textContent = zero + zero;
-        minutesGoingBy = zero + zero;
+        minutesEl.textContent = "0" + "0";
+        minutesGoingBy = "0" + "0";
     }
 }
 
@@ -73,7 +71,7 @@ function startMinutes() {
 
 const hoursEl = document.querySelector('.hours')        
 
-let hoursGoingBy = zero + zero;
+let hoursGoingBy = "0" + "0";
         
 function startHours() {
     hoursGoingBy++;
@@ -87,8 +85,8 @@ function startHours() {
     hoursEl.style.color = "red";
 
     if (hoursGoingBy === 24) {
-        hoursEl.textContent = zero + zero;
-        hoursGoingBy = zero + zero;
+        hoursEl.textContent = "0" + "0";
+        hoursGoingBy = "0" + "0";
     }
 }
     

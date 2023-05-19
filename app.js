@@ -4,12 +4,10 @@
         //after 59, go back to 00, but add increment to min
 
 const secondsEl = document.querySelector('.seconds');
-
 let secondsGoingBy = "0" + "0";
 
 function startSeconds() {
     secondsGoingBy++;
-    
     if (secondsGoingBy <=9) {
         //this ensures 0 is in front of numbers 0-9
         secondsEl.textContent = "0" + secondsGoingBy;
@@ -19,7 +17,7 @@ function startSeconds() {
     }
     //change active numbers to red
     secondsEl.style.color = "red";
-    
+
     if (secondsGoingBy === 60) {
         //add one increment to minute
         //print to display
@@ -43,12 +41,10 @@ secondsSpeed();
         //after 59, go back to 00, but add increase to hour
 
 const minutesEl = document.querySelector('.minutes');
-
 let minutesGoingBy = "0" + "0";
 
 function startMinutes() {
     minutesGoingBy++;
-
     if (minutesGoingBy <= 9) {
         minutesEl.textContent = "0" + minutesGoingBy;
     } else {
@@ -71,12 +67,10 @@ function startMinutes() {
         //after 23:59:59, go back to 00:00:00
 
 const hoursEl = document.querySelector('.hours')        
-
 let hoursGoingBy = "0" + "0";
         
 function startHours() {
     hoursGoingBy++;
-
     if (hoursGoingBy <= 9) {
         hoursEl.textContent = "0" + hoursGoingBy;
     } else {
@@ -88,7 +82,6 @@ function startHours() {
     if (hoursGoingBy === 24) {
         hoursGoingBy = "0" + "0";
         hoursEl.textContent = "0" + "0";
-        
     }
 }
     

@@ -84,6 +84,8 @@ function startHours() {
         hoursEl.textContent = "0" + "0";
     }
 }
+
+//need function to reset timer to 00:00:00 after 23:59:59
     
 
 

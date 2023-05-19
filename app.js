@@ -25,9 +25,9 @@ function startSeconds() {
         //print to display
         startMinutes();
         //reset to 00
-        minutesGoingBy = "0" + "0";
+        secondsGoingBy = "0" + "0";
         //print to display
-        minutesEl.textContent = "0" + "0";
+        secondsEl.textContent = "0" + "0";
     }
 }
 
@@ -59,8 +59,9 @@ function startMinutes() {
 
     if (minutesGoingBy === 60) {
         startHours();
-        minutesEl.textContent = "0" + "0";
         minutesGoingBy = "0" + "0";
+        minutesEl.textContent = "0" + "0";
+        
     }
 }
 
@@ -85,8 +86,9 @@ function startHours() {
     hoursEl.style.color = "red";
 
     if (hoursGoingBy === 24) {
-        hoursEl.textContent = "0" + "0";
         hoursGoingBy = "0" + "0";
+        hoursEl.textContent = "0" + "0";
+        
     }
 }
     

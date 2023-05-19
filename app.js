@@ -1,5 +1,3 @@
-
-
 //base
 //00:00:00
 //hr/min/sec
@@ -11,13 +9,29 @@
 
 const secondsEl = document.querySelector('.seconds');
 
-let secondsGoingBy = 00;
+let secondsGoingBy = "0" + "0";
 
 function startSeconds() {
     secondsGoingBy++;
-    secondsEl.textContent = secondsGoingBy;
-    if (secondsGoingBy === 59) {
-        secondsGoingBy === 00;
+    
+    if (secondsGoingBy <=9) {
+        //this ensures 0 is in front of numbers 0-9
+        secondsEl.textContent = "0" + secondsGoingBy;
+    } else {
+        secondsEl.textContent = secondsGoingBy;
+    }
+    secondsEl.style.color = "red";
+    
+    if (secondsGoingBy === 60) {
+        //add one increment to minute
+        //print to display
+        startMinutes();
+        //reset to 00
+        minutesGoingBy = "0" + "0";
+        //print to display
+        minutesEl.textContent = "0" + "0";
+        
+        
     }
 }
 
@@ -32,15 +46,55 @@ secondsSpeed();
     //00 -> 59
         //after 59, go back to 00, but add increase to hour
 
+const minutesEl = document.querySelector('.minutes');
+
+let minutesGoingBy = "0" + "0";
+
+function startMinutes() {
+    minutesGoingBy++;
+
+    if (minutesGoingBy <= 9) {
+        minutesEl.textContent = "0" + minutesGoingBy;
+    } else {
+        minutesEl.textContent = minutesGoingBy;
+    }
+
+    minutesEl.style.color = "red"
+
+    if (minutesGoingBy === 60) {
+        startHours();
+        minutesEl.textContent = "0" + "0";
+        minutesGoingBy = "0" + "0";
+    }
+}
+
 //function to set up hours
 //hours
     //00 -> 23
         //after 23:59:59, go back to 00:00:00
 
-//AM 00:00:00 to 11:59:59
-//PM 12:00:00 to 23:59:59 
+const hoursEl = document.querySelector('.hours')        
 
-//function to restart/reset
+let hoursGoingBy = "0" + "0";
+        
+function startHours() {
+    hoursGoingBy++;
+
+    if (hoursGoingBy <= 9) {
+        hoursEl.textContent = "0" + hoursGoingBy;
+    } else {
+        hoursEl.textContent = hoursGoingBy;
+    }
+
+    hoursEl.style.color = "red";
+
+    if (hoursGoingBy === 24) {
+        hoursEl.textContent = "0" + "0";
+        hoursGoingBy = "0" + "0";
+    }
+}
+
+
 
 
 //questions?

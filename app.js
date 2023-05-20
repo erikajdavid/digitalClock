@@ -79,13 +79,16 @@ function startHours() {
 
     hoursEl.style.color = "red";
 
+    //need function to reset timer to 00:00:00 after 23:59:59
     if (hoursGoingBy === 24) {
         hoursGoingBy = "0" + "0";
         hoursEl.textContent = "0" + "0";
+        minutesGoingBy = "0" + "0";
+        minutesEl.textContent = "0" + "0";
+        secondsGoingBy = "0" + "0";
+        secondsEl.textContent = "0" + "0";
     }
 }
-
-//need function to reset timer to 00:00:00 after 23:59:59
     
 
 
